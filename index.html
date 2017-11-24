@@ -1273,6 +1273,207 @@ message.channel.send(<span class="hljs-string">`<span class="hljs-subst">${Guild
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's ID
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's name
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>icon</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's icon code
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>splash</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's splash
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>ownerID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's ownerID
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>region</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's server region
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>afkTimeout</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Guild's AFK timeout (Seconds)
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>embedEnabled</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether Guild's embed is enabled or not
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>verificationLevel</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Guild's verificationLevel
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>defaultMessageNotifications</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Guild's default message notifications level
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>embedChannelID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's embed channel ID
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>explicitContentFilter</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Guild's content filter level
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>features</span> <code class='quiet'>(<a href="#box">Box</a>)</code>
+          : A box of String instances contains Guild's features
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>widgetChannelID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's WidgetChannel's ID
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>mfaLevel</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Guild's MFA level
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>widgetEnabled</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether widget is enabled or not
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>large</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the Guild is large or not
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>unavailable</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Wheter the Guild is unavailable or not
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>memberCount</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Guild's member count
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>channels</span> <code class='quiet'>(<a href="#box">Box</a>&#x3C;GuildChannel>)</code>
+          : A Box of GuildChannel instances
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>roles</span> <code class='quiet'>(<a href="#box">Box</a>&#x3C;<a href="#role">Role</a>>)</code>
+          : A Box of GuildRoles instances
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>emojis</span> <code class='quiet'>(<a href="#box">Box</a>&#x3C;<a href="#emoji">Emoji</a>>)</code>
+          : A Box of Emoji instances
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>members</span> <code class='quiet'>(<a href="#box">Box</a>&#x3C;<a href="#guildmember">GuildMember</a>>)</code>
+          : A Box of GuildMember instances
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>presences</span> <code class='quiet'>(<a href="#box">Box</a>&#x3C;<a href="#presence">Presence</a>>)</code>
+          : A Box of Presence instances
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>applicationID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : Guild's app ID
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>voiceStates</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+          : An array of the Guild's voice states
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>systemChannel</span> <code class='quiet'>(<a href="#textbasedchannel">TextBasedChannel</a>)</code>
+          : A channel where all the users can access
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>afkChannel</span> <code class='quiet'>(<a href="#voicechannel">VoiceChannel</a>)</code>
+          : A channel where AFK people go into
+
+          
+        </div>
+      
+    </div>
+  
 
   
 
@@ -1470,7 +1671,7 @@ Guild.banMember(<span class="hljs-string">"xxxxxxxxxxx"</span>,<span class="hljs
 
   
 
-  <div class='pre p1 fill-light mt0'>createChannel(options: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;GuildChannel></div>
+  <div class='pre p1 fill-light mt0'>createChannel(options: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;GuildChannel></div>
   
   
 
@@ -1487,9 +1688,80 @@ Guild.banMember(<span class="hljs-string">"xxxxxxxxxxx"</span>,<span class="hljs
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The options keys
+
           </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.name</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+  </td>
+  <td class='break-word'><span>Channel's name
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.type</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+  </td>
+  <td class='break-word'><span>Channel type, options: text, voice
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.bitrate</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?</code>
+  </td>
+  <td class='break-word'><span>Channel's bitrate (VOICE ONLY)
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.user_limit</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?</code>
+  </td>
+  <td class='break-word'><span>Channel's user limit (VOICE ONLY)
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.permission_overwrites</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;PermissionOverwrites>?</code>
+  </td>
+  <td class='break-word'><span>Channel's Permission overwrites
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.nsfw</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?</code>
+  </td>
+  <td class='break-word'><span>If the channel will be nsfw or not
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
           
         </div>
       
@@ -1956,15 +2228,15 @@ Guild.unbanMember(<span class="hljs-string">"xxxxxxxxxxx"</span>)
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>permissionOverwrites</span> <code class='quiet'>((<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>))</code>
-          : Channel's permission overwrites
+          <span class='code bold'>userLimit</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Channel's user limit
 
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>nsfw</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
-          : Whether the Channel is nsfw or not
+          <span class='code bold'>permissionOverwrites</span> <code class='quiet'>((<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>))</code>
+          : Channel's permission overwrites
 
           
         </div>
@@ -1977,15 +2249,8 @@ Guild.unbanMember(<span class="hljs-string">"xxxxxxxxxxx"</span>)
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>parentChannelID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-          : Parent channel ID
-
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>guildID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
-          : Guild's ID (The channel is in)
+          <span class='code bold'>bitrate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : Channel's bitrate
 
           
         </div>
