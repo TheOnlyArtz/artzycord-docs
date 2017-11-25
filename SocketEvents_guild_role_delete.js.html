@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>SocketEvents/guild_role_delete.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,25 +27,42 @@
 
 <div id="main">
     
+    <h1 class="page-title">SocketEvents/guild_role_delete.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const path = require('path')
+const Basic = require(path.join(__dirname, 'basic.js'));
+/**
+* Emits when a role gets deleted
+* @event Client#Guild_Role_Delete
+* @param {Role} role The deleted role
+*/
+class GuildRoleDelete extends Basic {
+  constructor(client) {
+    super(client)
+  }
 
+  handle(packet) {
+    let guild = this.client.guild.get(packet['guild_id']);
+    if (guild) {
+      const deletedRole = guild.roles.get(packet['role_id']);
+      guild.roles.delete(packet.role_id)
+      this.client.emit('Guild_Role_Delete', deletedRole)
+    }
+  }
+}
 
-
-
-
-
-
-
-
-    
-
-
-
+module.exports = GuildRoleDelete
+</code></pre>
+        </article>
+    </section>
 
 
 

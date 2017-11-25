@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Client - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Attachment.html">Attachment</a></li><li><a href="Box.html">Box</a><ul class='methods'><li data-type='method'><a href="Box.html#array">array</a></li><li data-type='method'><a href="Box.html#ArrayOfKeys">ArrayOfKeys</a></li><li data-type='method'><a href="Box.html#delete">delete</a></li><li data-type='method'><a href="Box.html#find">find</a></li><li data-type='method'><a href="Box.html#first">first</a></li><li data-type='method'><a href="Box.html#set">set</a></li></ul></li><li><a href="CategoryChannel.html">CategoryChannel</a></li><li><a href="Client.html">Client</a></li><li><a href="ClientUser.html">ClientUser</a><ul class='methods'><li data-type='method'><a href="ClientUser.html#setGame">setGame</a></li><li data-type='method'><a href="ClientUser.html#setStatus">setStatus</a></li></ul></li><li><a href="DMChannel.html">DMChannel</a><ul class='methods'><li data-type='method'><a href="DMChannel.html#send">send</a></li></ul></li><li><a href="EmbedMessage.html">EmbedMessage</a><ul class='methods'><li data-type='method'><a href="EmbedMessage.html#color">color</a></li><li data-type='method'><a href="EmbedMessage.html#newAuthor">newAuthor</a></li><li data-type='method'><a href="EmbedMessage.html#newDescription">newDescription</a></li><li data-type='method'><a href="EmbedMessage.html#newField">newField</a></li><li data-type='method'><a href="EmbedMessage.html#newFooter">newFooter</a></li><li data-type='method'><a href="EmbedMessage.html#newImage">newImage</a></li><li data-type='method'><a href="EmbedMessage.html#newProvider">newProvider</a></li><li data-type='method'><a href="EmbedMessage.html#newThumbnail">newThumbnail</a></li><li data-type='method'><a href="EmbedMessage.html#newTitle">newTitle</a></li><li data-type='method'><a href="EmbedMessage.html#newVideo">newVideo</a></li></ul></li><li><a href="Emoji.html">Emoji</a></li><li><a href="Game.html">Game</a></li><li><a href="GroupDM.html">GroupDM</a><ul class='methods'><li data-type='method'><a href="GroupDM.html#send">send</a></li></ul></li><li><a href="Guild.html">Guild</a><ul class='methods'><li data-type='method'><a href="Guild.html#banMember">banMember</a></li><li data-type='method'><a href="Guild.html#changeName">changeName</a></li><li data-type='method'><a href="Guild.html#createChannel">createChannel</a></li><li data-type='method'><a href="Guild.html#delete">delete</a></li><li data-type='method'><a href="Guild.html#deleteChannel">deleteChannel</a></li><li data-type='method'><a href="Guild.html#getMember">getMember</a></li><li data-type='method'><a href="Guild.html#unbanMember">unbanMember</a></li></ul></li><li><a href="GuildMember.html">GuildMember</a><ul class='methods'><li data-type='method'><a href="GuildMember.html#ban">ban</a></li><li data-type='method'><a href="GuildMember.html#toString">toString</a></li></ul></li><li><a href="GuildTextChannel.html">GuildTextChannel</a><ul class='methods'><li data-type='method'><a href="GuildTextChannel.html#send">send</a></li></ul></li><li><a href="Invite.html">Invite</a></li><li><a href="Message.html">Message</a></li><li><a href="Presence.html">Presence</a></li><li><a href="Role.html">Role</a><ul class='methods'><li data-type='method'><a href="Role.html#changeName">changeName</a></li><li data-type='method'><a href="Role.html#changePosition">changePosition</a></li><li data-type='method'><a href="Role.html#delete">delete</a></li><li data-type='method'><a href="Role.html#modify">modify</a></li></ul></li><li><a href="Structure.html">Structure</a></li><li><a href="TextBasedChannel.html">TextBasedChannel</a><ul class='methods'><li data-type='method'><a href="TextBasedChannel.html#send">send</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#toString">toString</a></li></ul></li><li><a href="VoiceChannel.html">VoiceChannel</a></li></ul><h3>Events</h3><ul><li><a href="Client.html#event:Channel_Create">Channel_Create</a></li><li><a href="Client.html#event:Channel_Delete">Channel_Delete</a></li><li><a href="Client.html#event:Channel_Update">Channel_Update</a></li><li><a href="Client.html#event:Guild_Create">Guild_Create</a></li><li><a href="Client.html#event:Guild_newMember">Guild_newMember</a></li><li><a href="Client.html#event:Guild_Role_Create">Guild_Role_Create</a></li><li><a href="Client.html#event:Guild_Role_Delete">Guild_Role_Delete</a></li><li><a href="Client.html#event:Guild_Role_Update">Guild_Role_Update</a></li><li><a href="Client.html#event:Guild_Update">Guild_Update</a></li><li><a href="Client.html#event:Message_Create">Message_Create</a></li><li><a href="Client.html#event:Message_Update">Message_Update</a></li><li><a href="Client.html#event:ready">ready</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Client</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Client
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Client"><span class="type-signature"></span>new Client<span class="signature">(options)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Client.js.html">Client.js</a>, <a href="Client.js.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>user</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The client's user object</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The client's options</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>users</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Box.html">Box</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A box which includes all the users object the client can get</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>channels</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Box.html">Box</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A box which includes all of the channels the client can access</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>guilds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Box.html">Box</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A box which includes all of the guilds the client is in</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>presences</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Box.html">Box</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A box which includes all of the presences of the users the client can get</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>emojis</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Box.html">Box</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A box which includes all of the emojis from the guilds the client is in</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>uptime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Returns the uptime of the client (Unix format)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>invite_link</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Returns Client's invite link (@everyone permissions)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Returns Client's connection status to the websocket</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Default client options
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>presence</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The default presence
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>game</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The name of the game</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The URL - Set the client to "Stream"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Client's status - 'online', 'dnd' ...</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Channel_Create">Channel_Create</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_channel_create.js.html">SocketEvents/channel_create.js</a>, <a href="SocketEvents_channel_create.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a channel gets created
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>channel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="GuildTextChannel.html">GuildTextChannel</a></span>
+|
+
+<span class="param-type"><a href="VoiceChannel.html">VoiceChannel</a></span>
+|
+
+<span class="param-type"><a href="GroupDM.html">GroupDM</a></span>
+|
+
+<span class="param-type"><a href="DMChannel.html">DMChannel</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The created channel</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Channel_Delete">Channel_Delete</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_channel_delete.js.html">SocketEvents/channel_delete.js</a>, <a href="SocketEvents_channel_delete.js.html#line4">line 4</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a channel gets deleted
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>deletedChannel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="GuildTextChannel.html">GuildTextChannel</a></span>
+|
+
+<span class="param-type"><a href="VoiceChannel.html">VoiceChannel</a></span>
+|
+
+<span class="param-type"><a href="GroupDM.html">GroupDM</a></span>
+|
+
+<span class="param-type"><a href="DMChannel.html">DMChannel</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The deleted channel</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Channel_Update">Channel_Update</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_channel_update.js.html">SocketEvents/channel_update.js</a>, <a href="SocketEvents_channel_update.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a channel gets updated
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>newChannel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="GuildTextChannel.html">GuildTextChannel</a></span>
+|
+
+<span class="param-type"><a href="VoiceChannel.html">VoiceChannel</a></span>
+|
+
+<span class="param-type"><a href="GroupDM.html">GroupDM</a></span>
+|
+
+<span class="param-type"><a href="DMChannel.html">DMChannel</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The updated channel</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>oldChannel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="GuildTextChannel.html">GuildTextChannel</a></span>
+|
+
+<span class="param-type"><a href="VoiceChannel.html">VoiceChannel</a></span>
+|
+
+<span class="param-type"><a href="GroupDM.html">GroupDM</a></span>
+|
+
+<span class="param-type"><a href="DMChannel.html">DMChannel</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The old channel</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Guild_Create">Guild_Create</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_guild_create.js.html">SocketEvents/guild_create.js</a>, <a href="SocketEvents_guild_create.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when the client joins a new guild
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>guild</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Guild.html">Guild</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new guild</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Guild_newMember">Guild_newMember</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_guild_member_add.js.html">SocketEvents/guild_member_add.js</a>, <a href="SocketEvents_guild_member_add.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a new member joins a guild
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>member</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="GuildMember.html">GuildMember</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new member</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Guild_Role_Create">Guild_Role_Create</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_guild_role_create.js.html">SocketEvents/guild_role_create.js</a>, <a href="SocketEvents_guild_role_create.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a role gets created
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>role</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Role.html">Role</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The created Role</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Guild_Role_Delete">Guild_Role_Delete</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_guild_role_delete.js.html">SocketEvents/guild_role_delete.js</a>, <a href="SocketEvents_guild_role_delete.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a role gets deleted
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>role</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Role.html">Role</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The deleted role</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Guild_Role_Update">Guild_Role_Update</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_guild_role_update.js.html">SocketEvents/guild_role_update.js</a>, <a href="SocketEvents_guild_role_update.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a role gets updated
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>newRole</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Role.html">Role</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The updated role</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>oldRole</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Role.html">Role</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The old role</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Guild_Update">Guild_Update</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_guild_update.js.html">SocketEvents/guild_update.js</a>, <a href="SocketEvents_guild_update.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when the client joins a new guild
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>guild</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Guild.html">Guild</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new guild</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Message_Create">Message_Create</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_message_create.js.html">SocketEvents/message_create.js</a>, <a href="SocketEvents_message_create.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a message gets created
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Message.html">Message</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The created message</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:Message_Update">Message_Update</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_message_update.js.html">SocketEvents/message_update.js</a>, <a href="SocketEvents_message_update.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when a message gets updated
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>newMessage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Message.html">Message</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new message</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>oldMessage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Message.html">Message</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The old message</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:ready">ready</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="SocketEvents_ready.js.html">SocketEvents/ready.js</a>, <a href="SocketEvents_ready.js.html#line5">line 5</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Emits when the client gets connected to the websocket
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Nov 25 2017 12:30:45 GMT+0200 (Jerusalem Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

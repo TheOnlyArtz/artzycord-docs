@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Models/Structure.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,25 +27,29 @@
 
 <div id="main">
     
+    <h1 class="page-title">Models/Structure.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+* @param {Object} client ArtzyCord's Client instance
+*/
+class Structure {
+	constructor(client) {
+		Object.defineProperty(this, 'client', {value: client});
+	}
+}
 
-
-
-
-
-
-
-
-
-    
-
-
-
+module.exports = Structure;
+</code></pre>
+        </article>
+    </section>
 
 
 

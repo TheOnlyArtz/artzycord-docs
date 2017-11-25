@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Models/User.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,25 +27,57 @@
 
 <div id="main">
     
+    <h1 class="page-title">Models/User.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const Structure = require('./Structure.js');
 
+/**
+* A User Structure meant to control over User properties and methods
+* @extends Structure
+* @param {Object} client ArtzyCord's Client instance
+* @param {Object} data A valid User data Object
+*/
+class User extends Structure {
+	constructor(client, data) {
+		super(client);
+		this.id = data.id;
+		this.username = data.username;
+		this.discriminator = data.discriminator;
+		this.avatar = data.avatar;
+		this.bot = Boolean(data.bot);
+		this.presence = client.presences.get(data.id) || "offline";
+	}
 
+	/**
+	* @readonly
+	* @property {String} Returns the user tag
+	*/
+	get tag() {
+		return '#' + this.username + this.discriminator
+	}
 
+	/**
+	* @returns {String} Returns the user's mention string
+	* @example
+	* message.channel.send(`${User.toString()}`);
+	*/
+	toString() {
+		return '&lt;@' + this.id + '>'
+	}
+}
 
-
-
-
-
-
-    
-
-
-
+module.exports = User;
+</code></pre>
+        </article>
+    </section>
 
 
 

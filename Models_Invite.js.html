@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Models/Invite.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,25 +27,50 @@
 
 <div id="main">
     
+    <h1 class="page-title">Models/Invite.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const path = require('path');
 
+const Guild = require(path.join(__dirname, '..', 'Models', 'Guild.js'));
+const User = require(path.join(__dirname, '..', 'Models', 'User.js'));
+const Structure = require(path.join(__dirname, '..', 'Models', 'Structure.js'));
 
+/**
+* An Invite Structure meant to control over Invite properties and methods
+* @extends Structure
+* @param {Object} client ArtzyCord's Client instance
+* @param {Object} data A valid Invite data Object
+* @property {String} link Returns the invite link
+*/
+class Invite extends Structure{
+	constructor(client, data) {
+		super(client);
+		this.inviter = client.users.get(data.invite.id) ? client.users.get(data.invite.id) : new User(client, data.inviter);
+		this.guild = client.guilds.get(data.guild.id);
+		this.inviteCode = data.code;
+		this.createdTimestamp = data.created_at;
+		this.uses = data.uses;
+		this.maxUses = data.max_uses;
+		this.channel = client.channels.get(data.channel.id);
+	}
 
+	get link() {
+		return 'https://discord.gg/' + this.inviteCode;
+	}
+};
 
-
-
-
-
-
-    
-
-
-
+module.exports = Invite
+</code></pre>
+        </article>
+    </section>
 
 
 

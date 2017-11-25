@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Models/Presence.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,25 +27,38 @@
 
 <div id="main">
     
+    <h1 class="page-title">Models/Presence.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const Structure = require('./Structure.js');
+const Game = require('./Game.js');
 
+/**
+* A Presence Structure meant to control over Presence properties and methods
+* @extends Structure
+* @param {Object} client ArtzyCord's Client instance
+* @param {Object} data A valid Presence data Object
+*/
+class Presence extends Structure {
+	constructor(client, data) {
+		super(client);
+		this.game = !data.game ? null : new Game(client, data.game);
+		this.status = data.status;
+		this.user = data.user;
+	}
+}
 
-
-
-
-
-
-
-
-    
-
-
-
+module.exports = Presence;
+</code></pre>
+        </article>
+    </section>
 
 
 

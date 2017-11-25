@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>SocketEvents/ready.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,25 +27,42 @@
 
 <div id="main">
     
+    <h1 class="page-title">SocketEvents/ready.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const path = require('path')
+const Basic = require(path.join(__dirname, 'basic.js'));
+const ClientUser = require(path.join(__dirname, '..', 'Models', 'ClientUser.js'));
 
+/**
+* Emits when the client gets connected to the websocket
+* @event Client#ready
+*/
+class ReadyEvent extends Basic {
+  constructor(client) {
+    super(client);
+  }
 
+  handle(data) {
+    this.client.user = new ClientUser(this.client, data);
+    this.client.ws.wsSessionID = data.session_id;
+    this.client.emit('ready');
+    this.client.ws.open = true;
+    this.client.readyUnix = Date.now();
+  }
+}
 
-
-
-
-
-
-
-    
-
-
-
+module.exports = ReadyEvent
+</code></pre>
+        </article>
+    </section>
 
 
 

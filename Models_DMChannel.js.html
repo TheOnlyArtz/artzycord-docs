@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>Models/DMChannel.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,25 +27,38 @@
 
 <div id="main">
     
+    <h1 class="page-title">Models/DMChannel.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const TextBasedChannel = require('./TextBasedChannel.js');
 
+/**
+* A DMChannel Structure meant to control over DMChannel properties and methods
+* @extends TextBasedChannel
+* @param {Object} client ArtzyCord's Client instance
+* @param {Object} channel A valid DMChannel data Object
+* @property {String} ownerID Channel's creator
+* @property {Array} recipients Array of the channel recipients
+*/
+class DMChannel extends TextBasedChannel {
+  constructor(client, channel) {
+    super(client, channel);
+    this.ownerID = channel['owner_id'] ? channel['owner_id'] : null;
+    this.recipients = channel['recipients'] ? channel['recipients'] : {};
+  }
+}
 
-
-
-
-
-
-
-
-    
-
-
-
+module.exports = DMChannel;
+</code></pre>
+        </article>
+    </section>
 
 
 
